@@ -1,0 +1,27 @@
+{
+  "name": "Get DOM",
+  "description": "Get DOCUMENT HTML for the provided URLS",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "https://redfin.com/*","activeTab", "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://redfin.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": [ "content.js"]
+    }
+  ],
+  "browser_action": {
+      "default_title": "Get DOM",
+      "default_icon": "print_16x16.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}
