@@ -24,7 +24,7 @@ var loadUrl = function (tab) {
     iUrl++;
   }
 }
-
+//Download the Html DOM content using content.js in a new tab
 var getDomcontent = function () {
   console.log("in getDomcontent")
   setTimeout(function () {
@@ -34,7 +34,7 @@ var getDomcontent = function () {
     )
   }, 1000);
 }
-
+// Loop over all the csv  Data to get home listing URLs
 var processCSV = function (allText) {
   var rows = allText.split("\n");
   for (var iRow = 0; iRow < rows.length; iRow++) {
